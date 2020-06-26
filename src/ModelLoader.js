@@ -1,15 +1,27 @@
 import React, { Suspense } from 'react'
 import Model from './Model'
-
+import Line from './Line'
+import * as THREE from "three";
 function ModelLoader(props) {
-
+  
+        
     return (
         <Suspense fallback={<Box />}>
-            {<Model {...props} />}
+            {
+         
+                    <React.Fragment>
+
+<Model {...props}   />
+
+<Line start={new THREE.Vector3(0.5, 0, -0.3)} end={ new THREE.Vector3(0.5, 2,  -0.3)}/>
+
+                    </React.Fragment>
+             }
         </Suspense>
     );
 
 }
+
 
 
 function Box() {
