@@ -4,6 +4,7 @@ import Controls from "./Controls";
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GridHelper } from "three";
+import './styles.css'
 
 extend({ OrbitControls ,GridHelper})
 
