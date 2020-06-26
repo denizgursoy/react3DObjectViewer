@@ -1,0 +1,27 @@
+newmtl Cube1_auv
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd rack.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 100.00
+newmtl Cube12_auv
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd servers.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 100.00
+newmtl console_auv
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd console.png
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 100.00
