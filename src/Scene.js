@@ -9,27 +9,31 @@ import './styles.css'
 extend({ OrbitControls, GridHelper })
 
 function Scene(props) {
+    const lightBrightness=8;
     return (
         <Canvas camera={{ position: [1, 1, -3] }}>
             <Controls enableDamping enablePan={false} dampingFactor={0.1} rotateSpeed={0.1} maxPolarAngle={Math.PI / 2} />
             <gridHelper args={[20, 20]} />
-            <ambientLight intensity={5} />
-            <Light brightness={10} color={"white"} />
+            <ambientLight intensity={lightBrightness} />
+            <Light brightness={lightBrightness} color={"white"} position={[1, 0.5, 0]} />
+            <Light brightness={lightBrightness} color={"white"} position={[-1, 0.5, 0]}/>
+            <Light brightness={lightBrightness} color={"white"} position={[0,0.5, 1]} />
+            <Light brightness={lightBrightness} color={"white"} position={[0, 0.5, -1]} />
             {props.children}
         </Canvas>
     );
 }
 
-function Light({ brightness, color }) {
+function Light({ brightness, color,position }) {
     return (
-      <spotLight
-        width={3}
-        height={3}
+      <directionalLight    
+        width={0.2}
+        height={0.2}
         color={color}
         intensity={brightness}
-        position={[1, 1, -3]}
+        position={position}
         lookAt={[0, 0, 0]}
-        penumbra={4}
+        penumbra={0.2}
         castShadow
       />
     );
