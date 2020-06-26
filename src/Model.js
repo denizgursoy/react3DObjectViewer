@@ -1,5 +1,7 @@
 import React from "react";
-
+import { unstable_createResource as createResource } from './react-cache/index'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import delay from 'delay'
 
 // Creates a cached async resource
 const path = 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/gltf/Duck/glTF/'
