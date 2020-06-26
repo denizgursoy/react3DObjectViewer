@@ -1,24 +1,24 @@
 import React, { Suspense } from 'react'
 import Model from './Model'
 
-function ModelLoader(props){
-  
-    return   (
+function ModelLoader(props) {
+
+    return (
         <Suspense fallback={<Box />}>
-        { <Model {...props}  />}
-    </Suspense>
+            {<Model {...props} />}
+        </Suspense>
     );
 
 }
 
 
 function Box() {
-  return (
-    <mesh>
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <meshStandardMaterial attach="material" transparent opacity={0.5} />
-    </mesh>
-  )
+    return (
+        <mesh>
+            <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+            <meshStandardMaterial attach="material" transparent opacity={0.5} />
+        </mesh>
+    )
 }
 
 export default ModelLoader;
