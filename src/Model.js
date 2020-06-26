@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import delay from 'delay'
 
 // Creates a cached async resource
-const path = 'https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/gltf/Duck/glTF/'
+const path = '/assets/gltf/server_rack/'
 const resource = createResource(file => new Promise(async res => (await delay(2000), new GLTFLoader().load(path + file, res))))
 
 function Model(props) {

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Scene>
-        <ModelLoader file="Duck.gltf" />
+        <ModelLoader file="scene.gltf" />
       </Scene>
 
     </>
