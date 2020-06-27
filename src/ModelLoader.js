@@ -1,6 +1,6 @@
 import React, { Suspense, Fragment } from 'react'
 import Model from './Model'
-
+import Light from './Light'
 
 function ModelLoader(props) {
 
@@ -10,7 +10,8 @@ function ModelLoader(props) {
             {
                 <Fragment>
                     <Model {...props} />
-            
+                
+          
                 </Fragment>
             }
         </Suspense>

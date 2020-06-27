@@ -1,7 +1,7 @@
 import React from "react";
 import { Canvas, extend } from 'react-three-fiber';
 import MouseControl from "./Controls";
-
+import Light from "./Light";
 
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -12,9 +12,6 @@ extend({ OrbitControls, GridHelper })
 
 function Scene(props) {
     const lightBrightness=8;
-
-  
-
     return (
       <React.Fragment>
         <Canvas camera={{ position: [1, 1, -3] }} >
@@ -34,19 +31,6 @@ function Scene(props) {
     );
 }
 
-function Light({ brightness, color,position }) {
-    return (
-      <directionalLight    
-        width={0.2}
-        height={0.2}
-        color={color}
-        intensity={brightness}
-        position={position}
-        lookAt={[0, 0, 0]}
-        penumbra={0.2}
-        castShadow
-      />
-    );
-  }
+
 
 export default Scene;
