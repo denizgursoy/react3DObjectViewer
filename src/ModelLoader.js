@@ -1,25 +1,18 @@
 import React, { Suspense, Fragment } from 'react'
 import Model from './Model'
-import Light from './Light'
 
 function ModelLoader(props) {
-
-
     return (
         <Suspense fallback={<Box />}>
             {
                 <Fragment>
                     <Model {...props} />
-                
-          
                 </Fragment>
             }
         </Suspense>
     );
 
 }
-
-
 
 function Box() {
     return (
