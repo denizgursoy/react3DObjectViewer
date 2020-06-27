@@ -12,8 +12,8 @@ function Model(props) {
   const { scene } = resource.read(props.file)
   // It won't come to this point until the resource has been fetched
   scene.position.set(0,1,0)
-  scene.onClick=() =>console.log("deniz")
-  return <primitive object={scene} />
+ 
+  return <primitive object={scene} onClick={()=>console.log("deniz")} />
 }
 
 export default Model;
