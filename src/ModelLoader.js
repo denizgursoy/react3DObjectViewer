@@ -1,22 +1,20 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, Fragment } from 'react'
 import Model from './Model'
-import Line from './Line'
+import Dimention from './Dimention'
 import * as THREE from "three";
 function ModelLoader(props) {
-  
-        
+
+
     return (
         <Suspense fallback={<Box />}>
             {
-         
-                    <React.Fragment>
 
-<Model {...props}   />
+                <Fragment>
+                    <Model {...props} />
+                    <Dimention start={new THREE.Vector3(0.3, 0,  -0.35)} objectHeight={2} objectWidth={1} objectDepth={1} />
+                </Fragment>
 
-<Line start={new THREE.Vector3(0.5, 0, -0.3)} end={ new THREE.Vector3(0.5, 2,  -0.3)}/>
-
-                    </React.Fragment>
-             }
+            }
         </Suspense>
     );
 

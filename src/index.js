@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Scene>
-        <ModelLoader file="scene.gltf" />
+        <ModelLoader file="scene.gltf"   onClick={() =>console.log("deniz")} />
       </Scene>
 
     </>

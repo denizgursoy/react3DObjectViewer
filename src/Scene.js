@@ -12,7 +12,7 @@ function Scene(props) {
     const lightBrightness=8;
     return (
         <Canvas camera={{ position: [1, 1, -3] }}>
-            <Controls enableDamping enablePan={false} dampingFactor={0.1} rotateSpeed={0.1} maxPolarAngle={Math.PI / 2} />
+            <Controls enableDamping enablePan={true} dampingFactor={0.1} rotateSpeed={0.1} maxPolarAngle={Math.PI / 2} />
             <gridHelper args={[20, 20]} />
             <ambientLight intensity={lightBrightness} />
             <Light brightness={lightBrightness} color={"white"} position={[1, 0.5, 0]} />

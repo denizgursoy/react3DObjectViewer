@@ -1,7 +1,6 @@
 
 import React from 'react'
-import * as THREE from "three";
-import { Canvas, useUpdate, useFrame } from "react-three-fiber";
+import {  useUpdate } from "react-three-fiber";
 
 export default function Line(props) {
     const ref = useUpdate(geometry => {
