@@ -10,6 +10,7 @@
     "react-dom": "16.8.6",
     "react-scripts": "2.1.8",
     "react-three-fiber": "^4.2.12",
+    "react-three-gui": "^0.1.5",
     "scheduler": "0.14.0",
     "three": "^0.104.0"
   },

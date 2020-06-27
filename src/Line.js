@@ -4,7 +4,7 @@ import {  useUpdate } from "react-three-fiber";
 
 export default function Line(props) {
     const ref = useUpdate(geometry => {
-      console.log(geometry);
+
       geometry.vertices.push(props.start);
       geometry.vertices.push(props.end);
      // geometry.setFromPoints(vertices);
@@ -20,7 +20,7 @@ export default function Line(props) {
     return (
       <line>
         <geometry attach="geometry" ref={ref} />
-        <lineBasicMaterial attach="material" color="blue" />
+        <lineBasicMaterial attach="material" color={props.color} />
       </line>
     );
   }

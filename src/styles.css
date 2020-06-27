@@ -44,3 +44,11 @@ button {
   font-size: 2em;
   transform: translate3d(-50%, -50%, 0);
 }
+
+.infoPanel {
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}

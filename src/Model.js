@@ -13,7 +13,7 @@ function Model(props) {
   // It won't come to this point until the resource has been fetched
   scene.position.set(0,1,0)
  
-  return <primitive object={scene} onClick={()=>console.log("deniz")} />
+  return <primitive object={scene} onClick={props.onClick} />
 }
 
 export default Model;
