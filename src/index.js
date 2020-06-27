@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom'
 import Scene from "./Scene"
 import ModelLoader from './ModelLoader'
 import React,{useState} from "react"
-import { Vector3 } from 'three';
 
 function App() {
   const [selectedObject, setSelectedObject] = useState({});
