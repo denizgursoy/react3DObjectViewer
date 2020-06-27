@@ -13,6 +13,7 @@ function App() {
         <div>
         <h3>{text}</h3>
        <h5>TT Bina : Ankara </h5>
+       <h5>Boyut : En (0.8m) Boy (2m) Derinlik (0.5m) </h5>
        <h5>Router Sayisi : 9 </h5>
       </div>
        );
