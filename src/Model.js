@@ -4,11 +4,12 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 
 function Model(props) {
-  console.log(props);
-  const gltf = useLoader(GLTFLoader, props.file);
-  
-  const primitiveProps = {
 
+  const gltf = useLoader(GLTFLoader, props.file);
+  const ref = useRef();
+  const primitiveProps = {
+    ref,
+    onClick:props.onClick,
     object: gltf.scene,
     position: props.position || [0, 0, 0],
     rotation: props.rotation || [0, 0, 0],
