@@ -36,12 +36,9 @@ function App() {
  var text="Rack is selected";
   return (
     <>
-
-
-    
       <Scene>
-        <ModelLoader file="/assets/gltf/server_rack/scene.gltf" onClick={()=>{setSelectedObject({type:text})}}   position={new Vector3(0,1,0)}  scale={new Vector3(1,1,1)}  />
-        <ModelLoader file="/assets/gltf/router/scene.gltf" onClick={()=>{setSelectedObject({type:"D link modem is selected"})}}  position={new Vector3(2,0,0)}   scale={new Vector3(0.002,0.002,0.002)}  />
+        <ModelLoader file="/assets/gltf/server_rack/scene.gltf" onClick={()=>{setSelectedObject({type:text})}}   position={new Vector3(0,1,0)}   />
+        <ModelLoader file="/assets/gltf/router/scene.gltf" onClick={()=>{setSelectedObject({type:"D link modem is selected"})}}  position={new Vector3(2,0,0)}   scale={new Vector3(0.002,0.002,0.002)} rotation={new Vector3(0,0.1,0)}   />
       </Scene>
       
       <div className="infoPanel">

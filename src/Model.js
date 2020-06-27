@@ -12,7 +12,19 @@ function Model(props) {
   const { scene } = resource.read(props.file)
   // It won't come to this point until the resource has been fetched
   scene.position.set(props.position.x,props.position.y,props.position.z)
-  scene.scale.set(props.scale.x,props.scale.y,props.scale.z)
+  console.log(scene);
+  if(props.scale!=null){
+    scene.scale.set(props.scale.x,props.scale.y,props.scale.z)
+  }
+
+
+ 
+  if(props.rotation!=null){
+    scene.rotation._X=props.rotation.x;
+    scene.rotation._Y=props.rotation.y;
+    scene.rotation._Z=props.rotation.y;
+  }
+
   return <primitive object={scene} onClick={props.onClick} />
 }
 
