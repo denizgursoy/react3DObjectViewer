@@ -3,7 +3,6 @@ import React from "react"
 export default function Light({ brightness, color,position }) {
 
 
-
     return (
       <directionalLight    
         width={0.2}
