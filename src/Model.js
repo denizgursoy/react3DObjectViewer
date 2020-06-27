@@ -1,28 +1,21 @@
-import React from "react";
-import { unstable_createResource as createResource } from './react-cache/index'
+import React, { useRef } from "react";
+import { useLoader } from "react-three-fiber";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import delay from 'delay'
 
-// Creates a cached async resource
-// eslint-disable-next-line
-const resource = createResource(file => new Promise(async res => (await delay(2000), new GLTFLoader().load(file, res))))
 
 function Model(props) {
-  // Read from cache ... this will throw an exception which will be caught by <Suspense />
-  const { scene } = resource.read(props.file)
-  // It won't come to this point until the resource has been fetched
-  scene.position.set(props.position.x, props.position.y, props.position.z)
-  if (props.scale != null) {
-    scene.scale.set(props.scale.x, props.scale.y, props.scale.z)
-  }
+  console.log(props);
+  const gltf = useLoader(GLTFLoader, props.file);
+  
+  const primitiveProps = {
 
-  if (props.rotation != null) {
-    scene.rotation._X = props.rotation.x;
-    scene.rotation._Y = props.rotation.y;
-    scene.rotation._Z = props.rotation.y;
-  }
-
-  return <primitive object={scene} onClick={props.onClick} />
+    object: gltf.scene,
+    position: props.position || [0, 0, 0],
+    rotation: props.rotation || [0, 0, 0],
+    scale: props.scale || [1, 1, 1],
+    castShadow: true,
+  };
+  return <primitive {...primitiveProps} />;
 }
 
 export default Model;
