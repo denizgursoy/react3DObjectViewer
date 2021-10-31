@@ -12,7 +12,7 @@
     "react-three-fiber": "^4.2.12",
     "react-three-gui": "^0.1.5",
     "scheduler": "0.14.0",
-    "three": "^0.125.0"
+    "three": "^0.104.0"
   },
   "devDependencies": {},
   "scripts": {
