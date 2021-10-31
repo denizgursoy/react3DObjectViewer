@@ -5,7 +5,7 @@ function Controls(props) {
   const { camera } = useThree()
   const controls = useRef()
   useFrame(() => controls.current && controls.current.update())
-  return <orbitControls ref={controls} args={[camera]} {...props} />
+  return <orbitControls ref={controls} args={[camera,document.getElementById('root')]} {...props}   />
 }
 
 export default Controls
